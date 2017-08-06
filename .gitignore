@@ -1,0 +1,31 @@
+# Blogdown common gitignore files
+# Source: https://github.com/rbind/yihui/blob/master/.gitignore
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+public
+static/figures
+blogdown
+
+# Source: https://github.com/kbroman/blog/blob/source/.gitignore
+
+content/post/*.html
+static/post/
+_cache/
+drafts/
+
+
+# DS_Store files
+
+public/.DS_Store
+public/css/.DS_Store
+public/images/.DS_Store
+themes/tuftesque/.DS_Store
+themes/tuftesque/data/.DS_Store
+themes/tuftesque/exampleSite/.DS_Store
+themes/tuftesque/layouts/.DS_Store
+themes/tuftesque/static/.DS_Store
+themes/tuftesque/static/css/.DS_Store
+themes/tuftesque/static/images/.DS_Store
