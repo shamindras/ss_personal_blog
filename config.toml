@@ -37,4 +37,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     width = 50
     height = 50
     alt = "Logo"
+    
+    [params.banner]
+    url = "http://bit.ly/2sV7B6p"
 
