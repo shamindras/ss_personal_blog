@@ -1,0 +1,120 @@
+---
+title: '"Getting tuftesque with blogging"'
+author: Shamindra Shrotriya
+date: '2017-08-09'
+slug: getting-tuftesque-with-blogging
+categories:
+  - data-science
+  - stats
+tags: []
+---
+
+
+
+<div id="the-tuftesque-blogdown-theme" class="section level2">
+<h2>The tuftesque blogdown theme</h2>
+<p><a href="http://nickstrayer.me">Nick Strayer</a> and <a href="http://lucymcgowan.com">Lucy D’Agostino McGowan</a> created the awesome <a href="https://github.com/LFOD/real-blog/tree/master/themes/tuftesque">tuftesque blogdown theme</a> upon which this blog is based. I decided to finally bite the bullet and start my blog with this wonderful theme. See <a href="">credits</a> for additional sources of inspiration.</p>
+</div>
+<div id="going-full-tufte-with-blogging" class="section level2">
+<h2>Going ‘full tufte’ with blogging</h2>
+<p>Nick and Lucy already wrote a <a href="http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/">blogpost already</a> detailing the process to get started with <code>blogdown</code> and the <code>tuftesque</code> theme. Please check it out as it is much likely to be more thorough than the instructions I’ve listed below.</p>
+<p>I’ve added a bit more detail on how to launch your blog using <a href="https://app.netlify.com/">netlify</a> and also setting up HTTPS and buying your own domain from Google domains (and syncing with netlify). I’ve repeated some of the common blogdown instructions to keep it all together.</p>
+</div>
+<div id="instructions---your-own-tuftesque-blog" class="section level2">
+<h2>Instructions - your own tuftesque blog</h2>
+<ol style="list-style-type: decimal">
+<li>You will need to install pandoc. Follow the official <a href="http://pandoc.org/installing.html">installation instructions</a></li>
+</ol>
+<p>On Mac I just ran the following in the terminal:</p>
+<pre class="r"><code>brew install pandoc</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Open up Rstudio and install the <a href="https://github.com/rstudio/blogdown">blogdown package</a> by running:</li>
+</ol>
+<pre class="r"><code>devtools::install_github(&quot;rstudio/blogdown&quot;)
+library(blogdown)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Install <a href="https://gohugo.io/">hugo</a> by running:</li>
+</ol>
+<pre class="r"><code>blogdown::install_hugo()</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Initialize a new blog using blogdown by running:</li>
+</ol>
+<pre class="r"><code>blogdown::new_site()</code></pre>
+<p>You should now see a new basic website appear in the RStudion viewer pane - yay for us!</p>
+<p>Now you can hit cancel in the Rstudio console pane 🛑. This will stop the current site from being served (i.e. rendered live) in the html viewer pane in RStudio. I know it feels lame to shut it off so soon, but we are just getting started here!</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Load the <code>tufteesque</code> theme. This is the moment you have all been waiting for 🌈</li>
+</ol>
+<pre class="r"><code>blogdown::install_theme(&#39;nstrayer/tuftesque&#39;)</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Re-load the site to check the theme is updated:</li>
+</ol>
+<pre class="r"><code>blogdown::serve_site()</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>Build site including all <code>Rmd</code> files - use method = “html”</li>
+</ol>
+<p>When you This will knit the <code>Rmd</code> files into <code>html</code> # See here for more details: <a href="https://bookdown.org/yihui/blogdown/methods.html" class="uri">https://bookdown.org/yihui/blogdown/methods.html</a> blogdown::build_site(local = FALSE, method = c(“html”))</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Create the gitignore file so that we commit only the relevant files for blogdown purposes.</li>
+</ol>
+<p>In the terminal run the following to create the <code>gitignore</code> file</p>
+<pre class="r"><code>touch .gitignore</code></pre>
+<p>Inside the <code>gitignore</code> file using your favorite editor (i.e. <code>emacs</code> of course) you can paste the following:</p>
+<pre class="r"><code># Blogdown common gitignore files
+# Source: https://github.com/rbind/yihui/blob/master/.gitignore
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+public
+static/figures
+blogdown
+
+# Source: https://github.com/kbroman/blog/blob/source/.gitignore
+
+_cache/
+drafts/
+
+
+# DS_Store files
+
+public/.DS_Store
+public/css/.DS_Store
+public/images/.DS_Store
+themes/tuftesque/.DS_Store
+themes/tuftesque/data/.DS_Store
+themes/tuftesque/exampleSite/.DS_Store
+themes/tuftesque/layouts/.DS_Store
+themes/tuftesque/static/.DS_Store
+themes/tuftesque/static/css/.DS_Store
+themes/tuftesque/static/images/.DS_Store</code></pre>
+<p>Inside the gitignore you should paste the following See <a href="https://github.com/shamindras/ss_personal_blog/blob/master/.gitignore">here</a> for the most up to date version of this file.</p>
+<p>If there is a more elegant way to recursively remove the mac <code>DS_Store</code> files from the <code>gitignore</code> please leave a comment below 😄.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>Build your awesome website!</li>
+</ol>
+<p>Build site - use method = “html” in the <code>build_site</code> function. This will knit the <code>Rmd</code> files into <code>html</code> which does not happen by default.</p>
+<pre class="r"><code>blogdown::build_site(local = FALSE, method = c(&quot;html&quot;))</code></pre>
+<p>You can also run <code>blogdown::serve_site()</code> to view the rendered site in the RStudio viewer pane. Now you should see the 3 default posts rendered tuftestyle in your blog.</p>
+<ol start="10" style="list-style-type: decimal">
+<li>Add and commit all of the git files and push to github</li>
+</ol>
+<pre class="r"><code>git add -A
+git commit -m &quot;FIX: Create first (default tufte-esque) blog, with gitignore&quot;
+git push origin master</code></pre>
+<ol start="11" style="list-style-type: decimal">
+<li><em>Optional:</em> Install the <code>tufte</code> package</li>
+</ol>
+<p>This is useful later when you start writing awesome blog posts and writing those sweet margin notes 😎 like a boss!</p>
+<pre class="r"><code>install.packages(&quot;tufte&quot;)</code></pre>
+<p>pretty cool <label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">These are super cool right</span></p>
+</div>
+<div id="further-resources" class="section level2">
+<h2>Further Resources</h2>
+<ul>
+<li><a href="https://bookdown.org/yihui/blogdown/">Yihui et. al’s Blogdown Book</a>. This is the definitive (and <a href="TODO:%20insert%20link%20here%20with%20latest%20github%20commits">frequently updated</a>) resource on all things blogdown</li>
+<li><a href="http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/">Nick and Lucy’s LFOD blog</a> which got me started down this tuftesque route!</li>
+<li></li>
+</ul>
+</div>

@@ -1,0 +1,40 @@
+---
+title: "And we're off!"
+author: Shamindra Shrotriya
+date: '2017-08-08'
+slug: and-we-are-off
+categories:
+  - data-science
+  - stats
+tags: []
+---
+```{r setup, cache=TRUE, echo=FALSE, warning=FALSE}
+library(emo)
+```
+
+## Welcome - Let's Get Statistical!
+
+I've decided to start blogging to document my learning and development in
+statistics as a new graduate student. I'd like it just to be a fun place 
+to document fun things I like to read about in the statistics, machine learning 
+space and anything else I am into e.g. books, cricket (the Australian baseball), bad (i.e. dad) puns etc...
+
+Feel free to pull up a chair and join me and we can explore statistics together!
+
+## Credits
+
+The credit to starting this blog goes to the following people from the interweb
+who stopped me from procrastinating (most of whom I have not met in person). I
+hope to not disappoint and create some useful content here `r emo::ji("smile")`.
+
+- [Yihui Xie](https://yihui.name/) - This website is built via his R package [**blogdown**](https://github.com/rstudio/blogdown). Yihue has done an 
+incredible job changing the way that reproducible statistics is practiced and
+`blogdown` is no exception to this!
+- [Nick Strayer](http://nickstrayer.me) and [Lucy D'Agostino McGowan](http://lucymcgowan.com) for creating the awesome [tuftesque blogdown theme](https://github.com/LFOD/real-blog/tree/master/themes/tuftesque) upon 
+which this blog is based. They are also posting high quality `rstats` content
+at their brilliant [Live Free Or Dichotomize](http://livefreeordichotomize.com/) 
+blog - do check it out and be inspired!
+- [Mara Averick](https://twitter.com/dataandme) for posting really useful blogdown links to get me started creating my own blog. Thanks Mara!
+- [Rebecca Barter](https://rlbarter.github.io/) a colleague of mine from Berkeley who wrote [this fantastic post](http://www.rebeccabarter.com/blog/2017-06-29-website/) on setting up the blog with netlify. Her blog is fantastic - I'm hitting subscribe 
+Bec!
+- [Rachel Thomas](http://www.fast.ai/) for posting this [fantastic blog post](http://www.fast.ai/2017/04/06/alternatives/) encouraging people like me to (finally!) create a blog - very effective metablogging Rachel!
