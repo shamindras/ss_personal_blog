@@ -13,7 +13,6 @@ tags: []
 library(tufte)
 ```
 
-
 ## The tuftesque blogdown theme
 
 [Nick Strayer](http://nickstrayer.me) and [Lucy D'Agostino McGowan](http://lucymcgowan.com) created the awesome [tuftesque blogdown theme](https://github.com/LFOD/real-blog/tree/master/themes/tuftesque) upon 
@@ -164,12 +163,12 @@ git push origin master
 This is useful later when you start writing awesome blog posts and writing those
 sweet margin notes `r emo::ji("sunglasses")` like a boss!
 
+`r tufte::margin_note(stringr::str_c(emo::ji("v"), "Some cool marginalia here", sep = " "))`
+
 ```{r, eval=FALSE}
+
 install.packages("tufte")
 ```
-
-pretty cool `r tufte::margin_note("These are super cool right")`
-
 
 ## Further Resources
 
