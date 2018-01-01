@@ -1,26 +1,29 @@
 ---
-title: '"Getting tuftesque with blogging"'
-author: Shamindra Shrotriya
-date: '2017-08-09'
+title: "Getting tuftesque with blogging"
+author: "Shamindra Shrotriya"
+date: '2017-12-31'
 slug: getting-tuftesque-with-blogging
-categories:
-  - data-science
-  - stats
 tags: []
+categories:
+- data-science
+- stats
 ---
 
 ```{r setup, echo=FALSE, cache=TRUE}
 library(tufte)
+library(emo)
 ```
 
 ## The tuftesque blogdown theme
 
 [Nick Strayer](http://nickstrayer.me) and [Lucy D'Agostino McGowan](http://lucymcgowan.com) created the awesome [tuftesque blogdown theme](https://github.com/LFOD/real-blog/tree/master/themes/tuftesque) upon 
-which this blog is based. I decided to finally bite the bullet and start
-my blog with this wonderful theme. See [credits]() for additional sources of 
-inspiration.
+which this blog is based. 
 
-## Going 'full tufte' with blogging
+I decided to finally bite the bullet and start
+my blog with this wonderful theme. See [credits]() for more details and
+additional sources of inspiration.
+
+## Going 'full tufte'
 
 Nick and Lucy already wrote a [blogpost already](http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/) detailing the process to get started with `blogdown` and 
 the `tuftesque` theme. Please check it out as it is much likely 
@@ -83,13 +86,15 @@ blogdown::serve_site()
 
 When you 
 This will knit the `Rmd` files into `html`
-# See here for more details: https://bookdown.org/yihui/blogdown/methods.html
-blogdown::build_site(local = FALSE, method = c("html"))
+See [here](https://bookdown.org/yihui/blogdown/methods.html) for more details
+```{r, eval=FALSE}
+`blogdown::build_site(local = FALSE, method = c("html"))`
+```
 
 8. Create the gitignore file so that we commit only the relevant 
 files for blogdown purposes. 
 
-In the terminal run the following to create the `gitignore` file
+In the terminal run the following to create the `gitignore` file:
 
 ```{r, eval=FALSE}
 touch .gitignore
@@ -101,7 +106,6 @@ you can paste the following:
 ```{r, eval=FALSE}
 # Blogdown common gitignore files
 # Source: https://github.com/rbind/yihui/blob/master/.gitignore
-
 .Rproj.user
 .Rhistory
 .RData
@@ -111,10 +115,8 @@ static/figures
 blogdown
 
 # Source: https://github.com/kbroman/blog/blob/source/.gitignore
-
 _cache/
 drafts/
-
 
 # DS_Store files
 
@@ -131,23 +133,23 @@ themes/tuftesque/static/images/.DS_Store
 ```
 
 Inside the gitignore you should paste the following
-See [here](https://github.com/shamindras/ss_personal_blog/blob/master/.gitignore) for the most up to date version of this file.
+See [here](https://github.com/shamindras/ss_personal_blog/blob/master/.gitignore) for the most up to date version of this file. I borrowed the gitignore contents from [Yihui Xie's](https://github.com/rbind/yihui/blob/master/.gitignore) and [Karl Broman's](https://github.com/rbind/yihui/blob/master/.gitignore) setups.
 
 If there is a more elegant way to recursively remove the mac `DS_Store` files 
 from the `gitignore` please leave a comment below `r emo::ji("smile")`.
 
 9. Build your awesome website!
 
-Build site - use method = "html" in the `build_site` function. This will 
+Build site - use `method = "html"` in the `build_site` function. This will 
 knit the `Rmd` files into `html` which does not happen by default.
 
 ```{r, eval=FALSE}
 blogdown::build_site(local = FALSE, method = c("html"))
 ```
 
-You can also run `blogdown::serve_site()` to view the rendered site in the 
+You can also rerun `blogdown::serve_site()` to view the rendered site in the 
 RStudio viewer pane. Now you should see the 3 default posts rendered tuftestyle
-in your blog.
+in your blog. The site will continue to render automatically in `Rstudio` as you save any local changes.
 
 10. Add and commit all of the git files and push to github
 
@@ -161,18 +163,35 @@ git push origin master
 11. _Optional:_ Install the `tufte` package
 
 This is useful later when you start writing awesome blog posts and writing those
-sweet margin notes `r emo::ji("sunglasses")` like a boss!
+sweet margin notes like a boss `r emo::ji("sunglasses")`!
 
 `r tufte::margin_note(stringr::str_c(emo::ji("v"), "Some cool marginalia here", sep = " "))`
-
 ```{r, eval=FALSE}
-
 install.packages("tufte")
 ```
+
+12. _Deploying your blog:_ Create a netlify account
+
+You've put in all this effort to setup your blog, now you are itching to send
+it out into the world `r emo::ji("grin")`! Per [Yihui's book](https://bookdown.org/yihui/blogdown/netlify.html) it is recommended that you use [netlify](https://app.netlify.com/). First start by creating
+a netlify account.
+
+12. _Deploying your blog:_ Create new site from your github account. He
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/00-setup_google_domain.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/00-setup_google_domain.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>This is what your site should look like at this point.</p>
+</div>
+</div>
+</div>
 
 ## Further Resources
 
 - [Yihui et. al's Blogdown Book](https://bookdown.org/yihui/blogdown/). This is
 the definitive (and [frequently updated](TODO: insert link here with latest github commits)) resource on all things blogdown
 - [Nick and Lucy's LFOD blog](http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/) which got me started down this tuftesque route!
-- 
