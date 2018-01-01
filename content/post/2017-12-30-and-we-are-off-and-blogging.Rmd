@@ -1,31 +1,31 @@
 ---
-title: "And we're off!"
+title: "And we're off and blogging!"
 author: Shamindra Shrotriya
-date: '2017-08-08'
-slug: and-we-are-off
-tags: []
-categories:
-  - data-science
-  - blogdown
+date: '2017-12-30'
+slug: and-we-are-off-and-blogging
+categories: ["personal"]
+tags: ["data-science", "Blogdown"]
+excerpt: "Bit the Blogdown bullet and decided to start blogging about statistics, machine learning and anything interesting as a graduate student in statistics..."
 ---
+
 ```{r setup, cache=TRUE, echo=FALSE, warning=FALSE}
 library(emo)
 ```
 
 ## Welcome - Let's Get Statistical!
 
-I've decided to start blogging to document my learning and development in
-statistics as a new graduate student. I'd like it just to be a fun place 
-to document fun things I like to read about in the statistics, machine learning 
-space and anything else I am into e.g. books, cricket (the Australian baseball), bad (i.e. dad) puns etc...
+Hi there! I'm Shamindra and a graduate student in Statistics at the wonderful Carnegie Mellon University (Go Tartans!). I've decided to start blogging to document my learning and development in
+statistics as a new graduate student. 
 
-Feel free to pull up a chair and join me and we can explore statistics together!
+I'd like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space  (`rstats`, `python`, `theory`...)  as well as anything else I am into e.g. books, cricket (the Australian version of baseball) etc.
+
+Feel free to pull up a chair and join me so that we can explore together!
 
 ## Credits
 
 The credit to starting this blog goes to the following people from the interweb
-who stopped me from procrastinating (most of whom I have not met in person). I
-hope to not disappoint and create some useful content here `r emo::ji("smile")`.
+who stopped me from procrastinating (most of whom I have not met in person `r emo::ji("smile")`). I
+hope to not disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
 
 - [Yihui Xie](https://yihui.name/) - This website is built via his R package [**blogdown**](https://github.com/rstudio/blogdown). Yihue has done an 
 incredible job changing the way that reproducible statistics is practiced and

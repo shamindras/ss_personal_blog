@@ -13,6 +13,7 @@ _cache/
 drafts/
 
 # Mac DS_Store files
+.DS_Store
 public/.DS_Store
 public/css/.DS_Store
 public/images/.DS_Store

@@ -3,10 +3,9 @@ title: "Getting tuftesque with blogging"
 author: "Shamindra Shrotriya"
 date: '2017-12-31'
 slug: getting-tuftesque-with-blogging
+categories: ["data-science", "Blogdown"]
 tags: []
-categories:
-    - tuftesque
-    - blogdown
+excerpt: "Some instructions on how this blog was built with the fantastic Yihui Xie's blogdown package and netlify..."
 ---
 
 
@@ -52,7 +51,7 @@ library(blogdown)</code></pre>
 </ol>
 <pre class="r"><code>blogdown::serve_site()</code></pre>
 <ol start="7" type="1">
-<li>Build site including all <code>Rmd</code> files - use method = “html”</li>
+<li>Build site including all <code>Rmd</code> files using <code>method = &quot;html&quot;</code></li>
 </ol>
 <p>When you This will knit the <code>Rmd</code> files into <code>html</code> See <a href="https://bookdown.org/yihui/blogdown/methods.html">here</a> for more details</p>
 <pre class="r"><code>`blogdown::build_site(local = FALSE, method = c(&quot;html&quot;))`</code></pre>
