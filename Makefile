@@ -1,4 +1,8 @@
-all: build
+.PHONY: clean build serve new
+
+clean:
+	find . -name .DS_Store -print0 | xargs -0 rm -rf
+	find . -name .Rhistory -print0 | xargs -0 rm -rf
 
 build:
 	Rscript -e "blogdown::build_site(local = "FALSE", method = 'html')"
