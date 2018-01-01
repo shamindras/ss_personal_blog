@@ -1,0 +1,281 @@
+---
+title: "Getting tuftesque with blogging"
+author: "Shamindra Shrotriya"
+date: '2017-12-31'
+slug: getting-tuftesque-with-blogging
+tags: []
+categories:
+    - tuftesque
+    - blogdown
+---
+
+```{r setup, echo=FALSE, cache=TRUE}
+library(tufte)
+library(emo)
+```
+
+## The tuftesque blogdown theme
+
+[Nick Strayer](http://nickstrayer.me) and [Lucy D'Agostino McGowan](http://lucymcgowan.com) created the awesome [tuftesque blogdown theme](https://github.com/LFOD/real-blog/tree/master/themes/tuftesque) upon 
+which this blog is based. 
+
+I decided to finally bite the bullet and start
+my blog with this wonderful theme. See [credits]() for more details and
+additional sources of inspiration.
+
+## Going 'full tufte'
+
+Nick and Lucy already wrote a [blogpost already](http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/) detailing the process to get started with `blogdown` and 
+the `tuftesque` theme. Please check it out as it is much likely 
+to be more thorough than the instructions I've listed below.
+
+I've added a bit more detail on how to launch your blog using [netlify](https://app.netlify.com/) and also setting up HTTPS and buying your
+own domain from Google domains (and syncing with netlify). I've repeated
+some of the common blogdown instructions to keep it all together.
+
+## Instructions - your own tuftesque blog
+
+1. You will need to install pandoc. Follow the official [installation instructions](http://pandoc.org/installing.html)
+
+On Mac I just ran the following in the terminal (after installing [homebrew](https://brew.sh/)):
+```{r, eval=FALSE}
+brew install pandoc
+```
+
+2. Open up Rstudio and install the [blogdown package](https://github.com/rstudio/blogdown) by running:
+
+```{r, eval=FALSE}
+devtools::install_github("rstudio/blogdown")
+library(blogdown)
+```
+
+3. Install [hugo](https://gohugo.io/) by running:
+
+```{r, eval=FALSE}
+blogdown::install_hugo()
+```
+
+4. Initialize a new blog using blogdown by running:
+
+```{r, eval=FALSE}
+blogdown::new_site()
+```
+
+You should now see a new basic website appear in the RStudion viewer pane - yay
+for us!
+
+Now you can hit cancel in the Rstudio console pane `r emo::ji("stop_sign")`. 
+This will stop the current site from being served (i.e. rendered live) in the 
+html viewer pane in RStudio. I know it feels lame to shut it off so soon, 
+but we are just getting started here!
+
+5. Load the `tufteesque` theme. This is the moment you have all been waiting for
+`r emo::ji("rainbow")`
+
+```{r, eval=FALSE}
+blogdown::install_theme('nstrayer/tuftesque')
+```
+
+6. Re-load the site to check the theme is updated:
+
+```{r, eval=FALSE}
+blogdown::serve_site()
+```
+
+7. Build site including all `Rmd` files - use method = "html"
+
+When you 
+This will knit the `Rmd` files into `html`
+See [here](https://bookdown.org/yihui/blogdown/methods.html) for more details
+```{r, eval=FALSE}
+`blogdown::build_site(local = FALSE, method = c("html"))`
+```
+
+8. Create the gitignore file so that we commit only the relevant 
+files for blogdown purposes. 
+
+In the terminal run the following to create the `gitignore` file:
+
+```{r, eval=FALSE}
+touch .gitignore
+```
+
+Inside the `gitignore` file using your favorite editor (i.e. `emacs` of course)
+you can paste the following:
+
+```{r, eval=FALSE}
+# Blogdown common gitignore files
+# Source: https://github.com/rbind/yihui/blob/master/.gitignore
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+public
+static/figures
+blogdown
+
+# Source: https://github.com/kbroman/blog/blob/source/.gitignore
+_cache/
+drafts/
+
+# DS_Store files
+
+public/.DS_Store
+public/css/.DS_Store
+public/images/.DS_Store
+themes/tuftesque/.DS_Store
+themes/tuftesque/data/.DS_Store
+themes/tuftesque/exampleSite/.DS_Store
+themes/tuftesque/layouts/.DS_Store
+themes/tuftesque/static/.DS_Store
+themes/tuftesque/static/css/.DS_Store
+themes/tuftesque/static/images/.DS_Store
+```
+
+Inside the gitignore you should paste the following
+See [here](https://github.com/shamindras/ss_personal_blog/blob/master/.gitignore) for the most up to date version of this file. I borrowed the gitignore contents from [Yihui Xie's](https://github.com/rbind/yihui/blob/master/.gitignore) and [Karl Broman's](https://github.com/rbind/yihui/blob/master/.gitignore) setups.
+
+If there is a more elegant way to recursively remove the mac `DS_Store` files 
+from the `gitignore` please leave a comment below `r emo::ji("smile")`.
+
+9. Build your awesome website!
+
+Build site - use `method = "html"` in the `build_site` function. This will 
+knit the `Rmd` files into `html` which does not happen by default.
+
+```{r, eval=FALSE}
+blogdown::build_site(local = FALSE, method = c("html"))
+```
+
+You can also rerun `blogdown::serve_site()` to view the rendered site in the 
+RStudio viewer pane. Now you should see the 3 default posts rendered tuftestyle
+in your blog. The site will continue to render automatically in `Rstudio` as you save any local changes.
+
+10. Add and commit all of the git files and push to github
+
+```{r, eval=FALSE}
+git add -A
+git commit -m "FIX: Create first (default tufte-esque) blog, with gitignore"
+git push origin master
+```
+
+
+11. _Optional:_ Install the `tufte` package
+
+This is useful later when you start writing awesome blog posts and writing those
+sweet margin notes like a boss `r emo::ji("sunglasses")`!
+
+`r tufte::margin_note(stringr::str_c(emo::ji("v"), "Some cool marginalia here", sep = " "))`
+```{r, eval=FALSE}
+install.packages("tufte")
+```
+
+12. _Deploying your blog:_ Create a `netlify` account.
+
+You've put in all this effort to setup your blog, now you are itching to send
+it out into the world `r emo::ji("grin")`! Per [Yihui et. al.'s book](https://bookdown.org/yihui/blogdown/netlify.html) it is recommended that you use [netlify](https://app.netlify.com/). First start by creating
+a netlify account. Sign-up is free.
+
+13. _Deploying your blog:_ Buy a domain. For example I bought `www.shamindras.com` from [Google Domains](https://domains.google.com) for `$12/yr`
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/00-setup_google_domain.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/00-setup_google_domain.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: The Google Domains Setup page for this blog</p>
+</div>
+</div>
+</div>
+
+14. _Deploying your blog:_ Login to [netlify](https://app.netlify.com/) and select `New Site from Git`.
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/01-netlify-new-site-from-git.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/01-netlify-new-site-from-git.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: After this site is built from Github page</p>
+</div>
+</div>
+</div>
+
+15. _Deploying your blog:_ Let netlify know that you would like to do continuous deployment from a particular cloud based version control platform. For this blog we use Github, so select that.
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/02-netlify-create-new.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/02-netlify-create-new.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: Show the selection process of cloud based version control platform - selecting Github in our case</p>
+</div>
+</div>
+</div>
+
+16. _Deploying your blog:_ Give `netlify` the necessary Github permissions to do continuous deployment
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/03-netlify-permissions.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/03-netlify-permissions.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: Giving netlify necessary github permissions</p>
+</div>
+</div>
+</div>
+
+17. _Deploying your blog:_ Select `Create a new site` and select the github repo upon which your site is based. In my this is [the blog repo](https://github.com/shamindras/ss_personal_blog).
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/04-netlify-select-github-repo.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/04-netlify-select-github-repo.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: Select the specific Github repo for your blog to link to netlify</p>
+</div>
+</div>
+</div>
+
+18. _Deploying your blog:_ Setup the continuous deployment settings for your website on netlify. This means that everytime you make changes i.e. `push` and `merge` to the linked Github repo, `netlify` will automatically refresh your website! How `r emo::ji("cool")` is that!
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/05-netlify-setup-continuous-deployment.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/05-netlify-setup-continuous-deployment.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: Setting up continuous deployment on netlify to Github repo</p>
+</div>
+</div>
+</div>
+
+19. _Deploying your blog:_ Setup your custom domain. `netlify` gives you a default domain name. This can be changed by selecting `Edit your custom domain` in personal settings. For this website this is set to `www.shamindras.com`.
+
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/06-netlify-setup-custom-domain.png">
+<img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/06-netlify-setup-custom-domain.png" alt="Base Site" style="width:100%">
+</img></a>
+<div class="caption">
+<p>Screenshot: Editing the custom domain on netlify</p>
+</div>
+</div>
+</div>
+
+## Further Resources
+
+- [Yihui et. al's Blogdown Book](https://bookdown.org/yihui/blogdown/). This is
+the definitive (and [frequently updated](TODO: insert link here with latest github commits)) resource on all things blogdown
+- [Nick and Lucy's LFOD blog](http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/) which got me started down this tuftesque route!

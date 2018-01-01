@@ -1,6 +1,5 @@
 # Blogdown common gitignore files
 # Source: https://github.com/rbind/yihui/blob/master/.gitignore
-
 .Rproj.user
 .Rhistory
 .RData
@@ -10,13 +9,10 @@ static/figures
 blogdown
 
 # Source: https://github.com/kbroman/blog/blob/source/.gitignore
-
 _cache/
 drafts/
 
-
-# DS_Store files
-
+# Mac DS_Store files
 public/.DS_Store
 public/css/.DS_Store
 public/images/.DS_Store
