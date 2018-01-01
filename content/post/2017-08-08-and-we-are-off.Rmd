@@ -3,10 +3,10 @@ title: "And we're off!"
 author: Shamindra Shrotriya
 date: '2017-08-08'
 slug: and-we-are-off
+tags: []
 categories:
   - data-science
-  - stats
-tags: []
+  - blogdown
 ---
 ```{r setup, cache=TRUE, echo=FALSE, warning=FALSE}
 library(emo)

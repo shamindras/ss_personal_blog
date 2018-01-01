@@ -6,6 +6,7 @@ theme = "tuftesque"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+author = "Shamindra Shrotriya"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -17,11 +18,11 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     name = "GitHub"
     url = "https://github.com/rstudio/blogdown"
 [[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/rstudio"
+    name = "Shamindra's Twitter"
+    url = "https://twitter.com/shamindraas"
 
 [params]
-    description = "A website built through Hugo and blogdown."
+    description = "Exploring the Simulated World!"
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.11.0"
@@ -37,7 +38,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     width = 50
     height = 50
     alt = "Logo"
-    
+
     [params.banner]
     url = "http://bit.ly/2sV7B6p"
 

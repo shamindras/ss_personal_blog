@@ -5,8 +5,8 @@ date: '2017-12-31'
 slug: getting-tuftesque-with-blogging
 tags: []
 categories:
-- data-science
-- stats
+    - tuftesque
+    - blogdown
 ---
 
 
@@ -26,7 +26,7 @@ categories:
 <ol type="1">
 <li>You will need to install pandoc. Follow the official <a href="http://pandoc.org/installing.html">installation instructions</a></li>
 </ol>
-<p>On Mac I just ran the following in the terminal:</p>
+<p>On Mac I just ran the following in the terminal (after installing <a href="https://brew.sh/">homebrew</a>):</p>
 <pre class="r"><code>brew install pandoc</code></pre>
 <ol start="2" type="1">
 <li>Open up Rstudio and install the <a href="https://github.com/rstudio/blogdown">blogdown package</a> by running:</li>
@@ -109,11 +109,11 @@ git push origin master</code></pre>
 <p><label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">✌️ Some cool marginalia here</span></p>
 <pre class="r"><code>install.packages(&quot;tufte&quot;)</code></pre>
 <ol start="12" type="1">
-<li><em>Deploying your blog:</em> Create a netlify account</li>
+<li><em>Deploying your blog:</em> Create a <code>netlify</code> account.</li>
 </ol>
-<p>You’ve put in all this effort to setup your blog, now you are itching to send it out into the world 😁! Per <a href="https://bookdown.org/yihui/blogdown/netlify.html">Yihui’s book</a> it is recommended that you use <a href="https://app.netlify.com/">netlify</a>. First start by creating a netlify account.</p>
-<ol start="12" type="1">
-<li><em>Deploying your blog:</em> Create new site from your github account. He</li>
+<p>You’ve put in all this effort to setup your blog, now you are itching to send it out into the world 😁! Per <a href="https://bookdown.org/yihui/blogdown/netlify.html">Yihui et. al.’s book</a> it is recommended that you use <a href="https://app.netlify.com/">netlify</a>. First start by creating a netlify account. Sign-up is free.</p>
+<ol start="13" type="1">
+<li><em>Deploying your blog:</em> Buy a domain. For example I bought <code>www.shamindras.com</code> from <a href="https://domains.google.com">Google Domains</a> for <code>$12/yr</code></li>
 </ol>
 <div class="row">
 <div class="col-md-6">
@@ -121,7 +121,91 @@ git push origin master</code></pre>
 <a href="/images/2017-12-31-getting-tuftesque-with-blogging/00-setup_google_domain.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/00-setup_google_domain.png" alt="Base Site" style="width:100%"> </img></a>
 <div class="caption">
 <p>
-This is what your site should look like at this point.
+Screenshot: The Google Domains Setup page for this blog
+</p>
+</div>
+</div>
+</div>
+<ol start="14" type="1">
+<li><em>Deploying your blog:</em> Login to <a href="https://app.netlify.com/">netlify</a> and select <code>New Site from Git</code>.</li>
+</ol>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/01-netlify-new-site-from-git.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/01-netlify-new-site-from-git.png" alt="Base Site" style="width:100%"> </img></a>
+<div class="caption">
+<p>
+Screenshot: After this site is built from Github page
+</p>
+</div>
+</div>
+</div>
+<ol start="15" type="1">
+<li><em>Deploying your blog:</em> Let netlify know that you would like to do continuous deployment from a particular cloud based version control platform. For this blog we use Github, so select that.</li>
+</ol>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/02-netlify-create-new.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/02-netlify-create-new.png" alt="Base Site" style="width:100%"> </img></a>
+<div class="caption">
+<p>
+Screenshot: Show the selection process of cloud based version control platform - selecting Github in our case
+</p>
+</div>
+</div>
+</div>
+<ol start="16" type="1">
+<li><em>Deploying your blog:</em> Give <code>netlify</code> the necessary Github permissions to do continuous deployment</li>
+</ol>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/03-netlify-permissions.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/03-netlify-permissions.png" alt="Base Site" style="width:100%"> </img></a>
+<div class="caption">
+<p>
+Screenshot: Giving netlify necessary github permissions
+</p>
+</div>
+</div>
+</div>
+<ol start="17" type="1">
+<li><em>Deploying your blog:</em> Select <code>Create a new site</code> and select the github repo upon which your site is based. In my this is <a href="https://github.com/shamindras/ss_personal_blog">the blog repo</a>.</li>
+</ol>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/04-netlify-select-github-repo.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/04-netlify-select-github-repo.png" alt="Base Site" style="width:100%"> </img></a>
+<div class="caption">
+<p>
+Screenshot: Select the specific Github repo for your blog to link to netlify
+</p>
+</div>
+</div>
+</div>
+<ol start="18" type="1">
+<li><em>Deploying your blog:</em> Setup the continuous deployment settings for your website on netlify. This means that everytime you make changes i.e. <code>push</code> and <code>merge</code> to the linked Github repo, <code>netlify</code> will automatically refresh your website! How 🆒 is that!</li>
+</ol>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/05-netlify-setup-continuous-deployment.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/05-netlify-setup-continuous-deployment.png" alt="Base Site" style="width:100%"> </img></a>
+<div class="caption">
+<p>
+Screenshot: Setting up continuous deployment on netlify to Github repo
+</p>
+</div>
+</div>
+</div>
+<ol start="19" type="1">
+<li><em>Deploying your blog:</em> Setup your custom domain. <code>netlify</code> gives you a default domain name. This can be changed by selecting <code>Edit your custom domain</code> in personal settings. For this website this is set to <code>www.shamindras.com</code>.</li>
+</ol>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<a href="/images/2017-12-31-getting-tuftesque-with-blogging/06-netlify-setup-custom-domain.png"> <img class = "img-responsive" src="/images/2017-12-31-getting-tuftesque-with-blogging/06-netlify-setup-custom-domain.png" alt="Base Site" style="width:100%"> </img></a>
+<div class="caption">
+<p>
+Screenshot: Editing the custom domain on netlify
 </p>
 </div>
 </div>
