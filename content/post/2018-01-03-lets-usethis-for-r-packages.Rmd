@@ -1,0 +1,56 @@
+---
+title: "Let's usethis for creating R Packages"
+author: "Shamindra Shrotriya"
+date: '2018-01-03'
+draft: true
+slug: getting-tuftesque-with-blogging
+categories: ["usethis", "r-packages"]
+tags: []
+excerpt: "Using the aptly named usethis package to cleanly create an R Package for a research project..."
+---
+
+```{r setup, echo=FALSE, cache=TRUE}
+library(tufte)
+library(emo)
+```
+
+## Introduction to the 'usethis' R Package
+
+TODO: Fill in `usethis` intro here and why you are using this for the `neuroada` package
+
+Mention `devtools` and how you previously used this for the following.
+
+## Step 1: Create an empty Github repo and clone it
+
+I created an empty github repo (no readme, no license - that will come shortly!) `https://github.com/shamindras/neuroada` and then cloned it locally:
+``` bash
+git clone git@github.com:shamindras/neuroada.git
+```
+
+`git` also let me know that
+
+``` bash
+Cloning into 'neuroada'...
+warning: You appear to have cloned an empty repository.
+```
+
+So we're on the right track here `r emo::ji("smile")`.
+
+Note: The `neuroada` pacakage repo will remain private for a while and thus
+inaccessible to view. You will still be able to follow along and create
+a similar repo.
+
+## Step 2: cd to the Repo and Create an RProj
+
+``` bash
+cd neuroada
+```
+
+
+
+
+I created an empty github repo (no readme, no license - that will come!) 
+
+## Step 3: Create an empty Github repo and clone it
+
+## Step 4: Create an empty Github repo and clone it
