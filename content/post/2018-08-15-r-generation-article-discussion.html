@@ -1,0 +1,97 @@
+---
+title: R Generation article - Discussion
+author: Shamindra Shrotriya
+date: '2018-08-16'
+slug: r-generation-article-discussion
+categories: ["CMU"]
+tags: ["data-science", "R", "history"]
+draft: yes
+---
+
+
+
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>This week in our <a href="http://www.stat.cmu.edu/~lrichard/history-of-stats/history-of-stats.html">CMU History of Statistics Group</a> we are discussing the article <a href="https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1740-9713.2018.01169.x">R Generation</a> from the significance magazine.</p>
+<p>Each week in the group we find a great article celebrating some big idea in the history of statistics and just have an informal group discussion on what those ideas mean to us today as practicing and research statisticians…sorry data scientists.</p>
+<p>We picked this article as our beloved <code>R</code> language celebrates is 25th anniversary 🎂 of it’s first public release since. Given how critically important statistical computing is to our work and research and increasingly so given the perfect storm of improved high-performance hardware, cheaper cloud data storage and the open access to high quality statistical software including <code>R</code> it seemed like the perfect time to veer our discussions into reflecting on the past and our thoughts for it’s future and in the process, ours 😄.</p>
+</div>
+<div id="summary-of-article" class="section level1">
+<h1>Summary of Article</h1>
+<p>The article offers a concise perspective on the phenomenon that is <code>R</code> and is organized in 4 main parts namely <code>R</code>’s History, <code>R</code> Community, <code>R</code> Culture and <code>R</code> Future. Below we note some of the interesting points for each section for the discussion.</p>
+<div id="rs-history" class="section level2">
+<h2><code>R</code>’s History</h2>
+<ul>
+<li>August 2018 marks the 25th anniversary of <code>R</code></li>
+<li>The origin of <code>R</code> is formed by the collaboration of Ross Ihaka (University of Auckland) and Robert Gentleman (University of Waterloo) who met when Gentleman was visited the Auckland campus in 1992</li>
+<li>They wanted to develop a language as flexible as <code>Scheme</code> but with the added statistical functionality and syntax of the existing <code>S</code> language</li>
+<li>Over the span of 3 months they developed the first version of what would be the <code>R</code> language - a fun nod to the first letter of both the authors first names</li>
+<li>It was adopted by the university of Auckland who needed statistical software that worked on Macintosh - talk about being cross platform from the get go!</li>
+<li>They released it publicly on the <code>S</code> listserv mailing list in August 1993</li>
+<li>In mid-90’s they considered turning it into a commercial product, but were luckily swayed away to keep it open access by fellow core member Martin Machler from ETH - phew!😥.</li>
+</ul>
+<div id="discussion-questions" class="section level3">
+<h3>Discussion Questions:</h3>
+<ul>
+<li>Any other interesting <code>R</code> historical anecdotes that people want to share?</li>
+<li>Were there any promising competitors to <code>R</code> that went from open-source to closed-source and lost popularity?</li>
+</ul>
+</div>
+</div>
+<div id="rs-community" class="section level2">
+<h2><code>R</code>’s Community</h2>
+<ul>
+<li>By mid-1997 the R Core team had 11 members including the original authors</li>
+<li>In March 1997 the biggest breakthrough occurred - Kurt Hornik and Friedrich Leisch developed <code>CRAN</code></li>
+<li><code>CRAN</code> meant that all libraries and <code>R</code> files were freely available in one place</li>
+<li>Importantly this open access meant that the original <code>R Core</code> community began to extend to wider data science community via the development of specific libaries!</li>
+<li>Enter Hadley Wickham, who helped launch some of the most widely used packages including <code>dplyr</code> and <code>ggplot2</code> (part of his thesis!)</li>
+<li>This set of packages often wrap existing base <code>R</code> functionality in a very clear API</li>
+<li>Ultimately this has minimized barriers of entry to using <code>R</code> by non CS users and encouraged entry from users in diverse fields such as life sciences and humanities</li>
+</ul>
+</div>
+<div id="r-culture" class="section level2">
+<h2><code>R</code> Culture</h2>
+<ul>
+<li><code>R</code> has traditionally been very male dominated</li>
+<li>Gabriela de Queiroz and other users have sought to make the community more diverse</li>
+<li>In October 2012 de Queiroz founded the ﬁrst chapter of R-Ladies in San Francisco to encourage women and others could:</li>
+</ul>
+<blockquote>
+<p>feel comfortable asking questions and making suggestions.</p>
+</blockquote>
+<ul>
+<li>Today there are 64 chapters and 13000 members around the world and growing!</li>
+<li>Diveristy of representation is improving slowly, the percentage of invited useR! conference talks by women increased from 0 to 34% from 2004 to 2016</li>
+</ul>
+<div id="discussion-questions-1" class="section level3">
+<h3>Discussion Questions:</h3>
+<ul>
+<li>Has anybody had any good personal experiences with RLadies they would like to share?</li>
+<li>What are some of the diversity efforts we are leading at CMU - specific to <code>R</code> or just in general?</li>
+</ul>
+</div>
+</div>
+<div id="r-future" class="section level2">
+<h2><code>R</code> Future</h2>
+<div id="discussion-questions-2" class="section level3">
+<h3>Discussion Questions:</h3>
+<ul>
+<li>Thomas Lumley feels that another statistical computing language won’t replace <code>R</code> soon</li>
+<li>Lumley feels that such a language would need to absorb <code>CRAN</code> and it’s stockpile of code</li>
+<li><code>CRAN</code> currently holds more than 12000 packages and ‘is growing near-exponentially’. Interestingly the article notes that:</li>
+</ul>
+<blockquote>
+<p>From January to May 2018, a median of 21 packages were added or updated per day.</p>
+</blockquote>
+<ul>
+<li><p>One solution to sustain <code>CRAN</code> is simply to add more reviewers</p></li>
+<li>What is the impact of <code>R</code> (and <code>Python</code>) long term on closed source competitors such as <code>SAS</code> and <code>Matlab</code></li>
+<li>How do people think <code>CRAN</code> review quality can be sustained to the standard that it is now?</li>
+<li>Should <code>R</code> have a set of standards like <code>PEP8</code> for preferred coding practices that can be statically checked before submitting packages? We have some of these already via <code>R CMD CHECK</code> and also</li>
+<li>What are the key limitations in <code>R</code> that people would like to see resolved e.g. new native data structures at the core level?</li>
+<li><p>What do students think of <code>Julia</code> as a leading statistical computing platform?</p></li>
+</ul>
+</div>
+</div>
+</div>
