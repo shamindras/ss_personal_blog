@@ -1,9 +1,8 @@
 ---
-title: "Let's usethis for creating R Packages"
+title: "Let's usethis for R Packages"
 author: "Shamindra Shrotriya"
 date: '2018-01-03'
-draft: true
-slug: getting-tuftesque-with-blogging
+slug: lets-usethis-for-r-packages
 categories: ["usethis", "r-packages"]
 tags: []
 excerpt: "Using the aptly named usethis package to cleanly create an R Package for a research project..."

@@ -1,24 +1,26 @@
 ---
-title: R Generation article - Discussion
-author: Shamindra Shrotriya
+title: "R Generation article - Discussion"
+author: "Shamindra Shrotriya"
 date: '2018-08-16'
 slug: r-generation-article-discussion
 categories: ["CMU"]
-tags: ["data-science", "R", "history"]
-draft: yes
+tags: []
+excerpt: "comment"
 ---
 
 # Background
 
 This week in our [CMU History of Statistics Group](http://www.stat.cmu.edu/~lrichard/history-of-stats/history-of-stats.html) 
 we are discussing the article [R Generation](https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1740-9713.2018.01169.x) 
-from the significance magazine.
+from the quarterly Significance Magazine by the American Statistical Association.
 
 Each week in the group we find a great article celebrating some big idea in 
 the history of statistics and just have an informal group discussion on what 
 those ideas mean to us today as practicing and research statisticians...sorry 
 data scientists.
 
+(Put in a note here about how we live in an amazing statistical time and due to perfect storm, and sometimes it is useful to sit and reflect on the past, present
+and future...)
 We picked this article as our beloved `R` language celebrates is 25th anniversary
 `r emo::ji("birthday")` of it's first public release since. Given how critically
 important statistical computing is to our work and research and increasingly so
@@ -55,6 +57,31 @@ luckily swayed away to keep it open access by fellow core member Martin Machler 
 - Were there any promising competitors to `R` that went from open-source to
 closed-source and lost popularity?
 
+- AR: Lispstat. Was famous because it had a lot of interactive features in the 90s. Make a graph, have buttons and sliders.
+- Basically interactive 'applets' before applets had been invented
+- Was quite big in UCLA (Jan de Lew). Went into a quick decline was 
+a very lispy syntax
+- Led to things like parentheses are faster than curly braces
+- S was big enough before R, so by adapting to it's syntax R presumably
+became more popular than other open source counterparts
+- Article should talk about the contributions of `S` and John Chambers
+is involved
+
+- Article jumps from `CRAN` directly to modern contributions such as the tidyverse. Other developments could have been mentioned. Hadley Wickham
+- AR filed a bug report in 2014 which still hasn't been fixed yet.
+- `CRAN` was the best way to package things at the time. It centralized
+package management
+- Getting stuff on CRAN is quite challenging but this is expected for
+more rigorous quality control, alternative is launch via github using `devtools`
+- Is the `CRAN` peer review standard outdated now?
+- Ron: Is the Journal of Statistical Software a higher bar than loading
+a package on `CRAN`? AR: Yes
+- Who will the `R Core` team pass on their duties to?
+- LR: Should we be teaching the tidyverse to beginners? Makes it difficult to transition to `Python` which has lower level data structures. 
+- Syntax of `stringr` is really useful
+- PE: Feeling of everything is a nail, use the hammer. Dataframes may
+not always be the best tool for the job
+
 ## `R`'s Community
 
 - By mid-1997 the R Core team had 11 members including the original authors
@@ -70,6 +97,8 @@ clear API
 - Ultimately this has minimized barriers of entry to using `R` by non CS
 users and encouraged entry from users in diverse fields such as life sciences
 and humanities
+- LR: Hadley's greatest package is `devtools`. TP: This has led to an
+explosion in the number of packages used.
 
 ## `R` Culture
 
@@ -83,6 +112,8 @@ diverse
 - Today there are 64 chapters and 13000 members around the world and growing!
 - Diveristy of representation is improving slowly, the percentage of invited 
 useR! conference talks by women increased from 0 to 34% from 2004 to 2016
+- AR: RCatladies. RY: Compared to other languages it is likely better
+in terms of representation.
 
 ### Discussion Questions:
 
@@ -115,5 +146,8 @@ that can be statically checked before submitting packages? We have some of these
 already via `R CMD CHECK` and also 
 - What are the key limitations in `R` that people would like to see resolved
 e.g. new native data structures at the core level?
-- What do students think of `Julia` as a leading statistical computing platform?
-
+- Taylor - can you describe the N-language problem and ways that we
+are addressing this? 
+- What role do students think of `Julia` as a leading statistical computing platform?
+- Are we going to focus statistical computing courses on `Julia` more
+now that it is stabilized?

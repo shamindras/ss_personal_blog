@@ -1,20 +1,20 @@
 ---
-title: R Generation article - Discussion
-author: Shamindra Shrotriya
+title: "R Generation article - Discussion"
+author: "Shamindra Shrotriya"
 date: '2018-08-16'
 slug: r-generation-article-discussion
 categories: ["CMU"]
-tags: ["data-science", "R", "history"]
-draft: yes
+tags: []
+excerpt: "comment"
 ---
 
 
 
 <div id="background" class="section level1">
 <h1>Background</h1>
-<p>This week in our <a href="http://www.stat.cmu.edu/~lrichard/history-of-stats/history-of-stats.html">CMU History of Statistics Group</a> we are discussing the article <a href="https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1740-9713.2018.01169.x">R Generation</a> from the significance magazine.</p>
+<p>This week in our <a href="http://www.stat.cmu.edu/~lrichard/history-of-stats/history-of-stats.html">CMU History of Statistics Group</a> we are discussing the article <a href="https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1740-9713.2018.01169.x">R Generation</a> from the quarterly Significance Magazine by the American Statistical Association.</p>
 <p>Each week in the group we find a great article celebrating some big idea in the history of statistics and just have an informal group discussion on what those ideas mean to us today as practicing and research statisticians…sorry data scientists.</p>
-<p>We picked this article as our beloved <code>R</code> language celebrates is 25th anniversary 🎂 of it’s first public release since. Given how critically important statistical computing is to our work and research and increasingly so given the perfect storm of improved high-performance hardware, cheaper cloud data storage and the open access to high quality statistical software including <code>R</code> it seemed like the perfect time to veer our discussions into reflecting on the past and our thoughts for it’s future and in the process, ours 😄.</p>
+<p>(Put in a note here about how we live in an amazing statistical time and due to perfect storm, and sometimes it is useful to sit and reflect on the past, present and future…) We picked this article as our beloved <code>R</code> language celebrates is 25th anniversary 🎂 of it’s first public release since. Given how critically important statistical computing is to our work and research and increasingly so given the perfect storm of improved high-performance hardware, cheaper cloud data storage and the open access to high quality statistical software including <code>R</code> it seemed like the perfect time to veer our discussions into reflecting on the past and our thoughts for it’s future and in the process, ours 😄.</p>
 </div>
 <div id="summary-of-article" class="section level1">
 <h1>Summary of Article</h1>
@@ -34,7 +34,23 @@ draft: yes
 <h3>Discussion Questions:</h3>
 <ul>
 <li>Any other interesting <code>R</code> historical anecdotes that people want to share?</li>
-<li>Were there any promising competitors to <code>R</code> that went from open-source to closed-source and lost popularity?</li>
+<li><p>Were there any promising competitors to <code>R</code> that went from open-source to closed-source and lost popularity?</p></li>
+<li>AR: Lispstat. Was famous because it had a lot of interactive features in the 90s. Make a graph, have buttons and sliders.</li>
+<li>Basically interactive ‘applets’ before applets had been invented</li>
+<li>Was quite big in UCLA (Jan de Lew). Went into a quick decline was a very lispy syntax</li>
+<li>Led to things like parentheses are faster than curly braces</li>
+<li>S was big enough before R, so by adapting to it’s syntax R presumably became more popular than other open source counterparts</li>
+<li><p>Article should talk about the contributions of <code>S</code> and John Chambers is involved</p></li>
+<li>Article jumps from <code>CRAN</code> directly to modern contributions such as the tidyverse. Other developments could have been mentioned. Hadley Wickham</li>
+<li>AR filed a bug report in 2014 which still hasn’t been fixed yet.</li>
+<li><code>CRAN</code> was the best way to package things at the time. It centralized package management</li>
+<li>Getting stuff on CRAN is quite challenging but this is expected for more rigorous quality control, alternative is launch via github using <code>devtools</code></li>
+<li>Is the <code>CRAN</code> peer review standard outdated now?</li>
+<li>Ron: Is the Journal of Statistical Software a higher bar than loading a package on <code>CRAN</code>? AR: Yes</li>
+<li>Who will the <code>R Core</code> team pass on their duties to?</li>
+<li>LR: Should we be teaching the tidyverse to beginners? Makes it difficult to transition to <code>Python</code> which has lower level data structures.</li>
+<li>Syntax of <code>stringr</code> is really useful</li>
+<li><p>PE: Feeling of everything is a nail, use the hammer. Dataframes may not always be the best tool for the job</p></li>
 </ul>
 </div>
 </div>
@@ -48,6 +64,7 @@ draft: yes
 <li>Enter Hadley Wickham, who helped launch some of the most widely used packages including <code>dplyr</code> and <code>ggplot2</code> (part of his thesis!)</li>
 <li>This set of packages often wrap existing base <code>R</code> functionality in a very clear API</li>
 <li>Ultimately this has minimized barriers of entry to using <code>R</code> by non CS users and encouraged entry from users in diverse fields such as life sciences and humanities</li>
+<li>LR: Hadley’s greatest package is <code>devtools</code>. TP: This has led to an explosion in the number of packages used.</li>
 </ul>
 </div>
 <div id="r-culture" class="section level2">
@@ -63,6 +80,7 @@ draft: yes
 <ul>
 <li>Today there are 64 chapters and 13000 members around the world and growing!</li>
 <li>Diveristy of representation is improving slowly, the percentage of invited useR! conference talks by women increased from 0 to 34% from 2004 to 2016</li>
+<li>AR: RCatladies. RY: Compared to other languages it is likely better in terms of representation.</li>
 </ul>
 <div id="discussion-questions-1" class="section level3">
 <h3>Discussion Questions:</h3>
@@ -90,7 +108,9 @@ draft: yes
 <li>How do people think <code>CRAN</code> review quality can be sustained to the standard that it is now?</li>
 <li>Should <code>R</code> have a set of standards like <code>PEP8</code> for preferred coding practices that can be statically checked before submitting packages? We have some of these already via <code>R CMD CHECK</code> and also</li>
 <li>What are the key limitations in <code>R</code> that people would like to see resolved e.g. new native data structures at the core level?</li>
-<li><p>What do students think of <code>Julia</code> as a leading statistical computing platform?</p></li>
+<li>Taylor - can you describe the N-language problem and ways that we are addressing this?</li>
+<li>What role do students think of <code>Julia</code> as a leading statistical computing platform?</li>
+<li><p>Are we going to focus statistical computing courses on <code>Julia</code> more now that it is stabilized?</p></li>
 </ul>
 </div>
 </div>
